@@ -1,0 +1,56 @@
+@import '../../../app/colors.scss';
+@import '../../../app/fontSizes.scss';
+
+.welcomeSlider {
+  position: relative;
+  color: $white;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0 30px;
+
+  h1 {
+    font-size: $welcome-slider-header-s;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  p {
+    font-size: $large;
+    font-weight: 400;
+    text-align: center;
+    line-height: 22px;
+  }
+
+  img {
+    position: absolute;
+    /*   height: 100%;
+    width: 100%; */
+    top: 0;
+    left: 0;
+  }
+
+  button {
+    margin: 36px 0;
+  }
+}
+
+.slideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+
+.paginationBullet {
+  background: $white;
+  opacity: 1;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+
+  border: 3px solid transparent;
+}
