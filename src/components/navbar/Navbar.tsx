@@ -2,17 +2,33 @@
 /* eslint-disable unicorn/prefer-array-find */
 'use client'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { LuSearch } from 'react-icons/lu'
 import logoWhite from '../../../public/logos/BALIndustryLogoWhite.svg'
 import styles from './Navbar.module.scss'
 import Hamburger from './hamburger/Hamburger'
 import HamburgerMenu from './hamburgerMenu/HamburgerMenu'
-import { LuSearch } from 'react-icons/lu'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [chosenMenu, setChosenMenu] = useState<string | null>(null)
+
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const handleOutSideClick = (event) => {
+      if (!ref.current?.contains(event.target)) {
+        setChosenMenu(null)
+      }
+    }
+
+    window.addEventListener('click', handleOutSideClick)
+
+    return () => {
+      window.removeEventListener('click', handleOutSideClick)
+    }
+  }, [ref, chosenMenu])
 
   const menuFields = [
     { fieldName: 'O NAS', subFields: ['O FIRMIE', 'KONTAKT'] },
@@ -68,12 +84,16 @@ export default function Navbar() {
               <li>Polska</li>
             </ul>
           </div>
-          <div className={styles.desktopNavbarBot}>
+          <div
+            className={`${styles.desktopNavbarBot} ${chosenMenu === null ? '' : styles.submenuOpen}`}
+            ref={ref}
+          >
             <div>
               <ul className={styles.desktopNavMainCategories}>
                 {menuFields.map((field) => (
                   <li
                     key={field.fieldName}
+                    className={`${chosenMenu === field.fieldName ? styles.activeMenu : null}`}
                     onClick={() => {
                       setChosenMenu(field.fieldName)
                     }}
@@ -83,17 +103,24 @@ export default function Navbar() {
                 ))}
               </ul>
             </div>
-            {chosenMenu === null ? null : (
-              <div>
-                <ul>
-                  {menuFields
-                    .filter((field) => field.fieldName === chosenMenu)[0]
-                    .subFields.map((subfield) => (
-                      <li key={subfield}>{subfield}</li>
-                    ))}
-                </ul>
-              </div>
-            )}
+            <div className={`${styles.submenusList}`}>
+              <ul>
+                {chosenMenu === null
+                  ? null
+                  : menuFields
+                      .filter((field) => field.fieldName === chosenMenu)[0]
+                      .subFields.map((subfield) => (
+                        <li
+                          key={subfield}
+                          onClick={() => {
+                            setChosenMenu(null)
+                          }}
+                        >
+                          {subfield}
+                        </li>
+                      ))}
+              </ul>
+            </div>
           </div>
         </div>
       )}
