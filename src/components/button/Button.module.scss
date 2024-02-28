@@ -1,5 +1,5 @@
-@import '../../app/colors.scss';
-@import '../../app/fontSizes.scss';
+@import '@/app/styles/colors';
+@import '@/app/styles/fontSizes';
 
 .button {
   background-color: $button-bg;

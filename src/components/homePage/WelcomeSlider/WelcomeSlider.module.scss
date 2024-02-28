@@ -1,6 +1,6 @@
-@import '../../../app/colors.scss';
-@import '../../../app/fontSizes.scss';
-@import '../../../app/diff.scss';
+@import '@/app/styles/colors';
+@import '@/app/styles/fontSizes';
+@import '@/app/styles/diff';
 
 .welcomeSlider {
   position: relative;
