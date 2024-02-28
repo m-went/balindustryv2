@@ -7,7 +7,7 @@
   z-index: 2;
   height: $navbar-height;
   width: 100%;
-  padding: 40px 38px 35px;
+  padding: 0 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +15,6 @@
   background-color: $navbar-bg;
   img {
     height: 100%;
-    width: 86px;
+    width: 60px;
   }
 }

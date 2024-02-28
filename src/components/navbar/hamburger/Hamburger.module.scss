@@ -1,8 +1,8 @@
 @import '../../../app/colors.scss';
 
 .hamburger {
-  width: 60px;
-  height: 45px;
+  width: 50px;
+  height: 40px;
   position: relative;
   margin: 50px 10px;
   -webkit-transform: rotate(0deg);
@@ -14,12 +14,13 @@
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  top: 5px;
 }
 
 .hamburger span {
   display: block;
   position: absolute;
-  height: 6px;
+  height: 4px;
   width: 100%;
   background: $white;
   border-radius: 0;
@@ -41,11 +42,11 @@
 
 .hamburger span:nth-child(2),
 .hamburger span:nth-child(3) {
-  top: 18px;
+  top: 14px;
 }
 
 .hamburger span:nth-child(4) {
-  top: 36px;
+  top: 28px;
 }
 
 .hamburger .open span:nth-child(1) {
