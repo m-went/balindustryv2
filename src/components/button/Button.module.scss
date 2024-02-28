@@ -3,7 +3,7 @@
 
 .button {
   background-color: $button-bg;
-  color: $text-main-color;
+  color: $text-white-color;
   border-radius: 8px;
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@
   font-size: $small;
 }
 .medium {
-  padding: 8px 40px;
+  padding: 18px 40px;
   font-size: $medium;
 }
 

@@ -1,5 +1,6 @@
 @import '../../../app/colors.scss';
 @import '../../../app/fontSizes.scss';
+@import '../../../app/diff.scss';
 
 .welcomeSlider {
   position: relative;
@@ -7,6 +8,7 @@
   overflow: hidden;
   height: 100vh;
   padding: 0 30px;
+  padding-top: $navbar-height;
 
   h1 {
     font-size: $welcome-slider-header-s;
