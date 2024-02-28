@@ -1,6 +1,6 @@
-@import '../../app/colors.scss';
-@import '../../app/diff.scss';
-@import '../../app/fontSizes.scss';
+@import '@/app/styles/colors';
+@import '@/app/styles/diff';
+@import '@/app/fontSizes';
 
 .navbar {
   position: sticky;
