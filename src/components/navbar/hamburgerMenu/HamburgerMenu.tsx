@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-find */
 /* eslint-disable unicorn/prefer-array-find */
-/* eslint-disable import/no-extraneous-dependencies */
+
 'use client'
 import {
   FaChevronRight,
@@ -14,34 +14,15 @@ import styles from './HamburgerMenu.module.scss'
 
 interface HamburgerMenuProps {
   isMenuOpen: boolean
+  menuFields: Array<{ fieldName: string; subFields: string[] }>
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isMenuOpen }) => {
+const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
+  isMenuOpen,
+  menuFields,
+}) => {
   const [chosenMenu, setChosenMenu] = useState<string | null>(null)
-  const menuFields = [
-    { fieldName: 'O NAS', subFields: ['O FIRMIE', 'KONTAKT'] },
-    {
-      fieldName: 'ROBOTYZACJA I AUTOMATYZACJA',
-      subFields: [
-        'STANOWISKA ZROBOTYZOWANE',
-        'AUTOMATYZACJA MASZYN I URZĄDZEŃ',
-      ],
-    },
-    {
-      fieldName: 'PARK MASZYNOWY',
-      subFields: ['DZIAŁ OBRÓBKI CNC', 'DZIAŁ OBRÓBKI METALOWEJ', 'LAKIERNIE'],
-    },
-    {
-      fieldName: 'ROZWIĄZANIA',
-      subFields: [
-        'SATYNIARKI',
-        'MAGAZYN PIONOWY BLACH',
-        'PIECE KOMOROWE',
-        'LAKIERNIE',
-      ],
-    },
-    { fieldName: 'USŁUGI', subFields: ['WYCENA CIĘCIA', 'FORMULARZ OFERTOWY'] },
-  ]
+
   return (
     <div
       className={`${styles.hamburgerMenu} ${isMenuOpen ? styles.open : styles.closed}`}

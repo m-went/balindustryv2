@@ -18,3 +18,40 @@
     width: 60px;
   }
 }
+
+.desktopNavbar,
+.desktopNavbarTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktopNavbar ul {
+  display: flex;
+}
+
+.searchbar {
+  width: 456px;
+  padding: 10px 14px;
+  padding-left: 34px;
+  border-radius: 4px;
+  background-color: $searchbar-bg;
+}
+
+.searchbar:focus {
+  outline: none;
+}
+
+.searchbarWrapper {
+  position: relative;
+
+  svg {
+    color: $searchbar-color;
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    top: 21%;
+    left: 14px;
+  }
+}
