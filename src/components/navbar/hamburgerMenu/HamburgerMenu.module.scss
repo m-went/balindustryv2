@@ -3,13 +3,13 @@
 
 .hamburgerMenu {
   position: absolute;
-  top: $navbar-height;
+  top: $navbar-height-mobile;
   width: 100%;
   max-width: 350px;
   background-color: $white;
   color: $text-dark-color;
   transition: 0.3s;
-  height: calc(100vh - $navbar-height);
+  height: calc(100vh - $navbar-height-mobile);
   max-height: 690px;
   display: flex;
   flex-direction: column;
