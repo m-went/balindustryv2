@@ -4,13 +4,14 @@ import 'swiper/css/pagination'
 import styles from './page.module.scss'
 import WelcomeSlider from '@/components/homePage/WelcomeSlider/WelcomeSlider'
 import PopularOffers from '@/components/homePage/PopularOffers/PopularOffers'
+import RoboticStations from '@/components/homePage/RoboticStations/RoboticStations'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <WelcomeSlider />
       <PopularOffers />
-      <div>stanowiska zrobotyzowane</div>
+      <RoboticStations />
       <div>
         <h2>Odkryj nowoczesne rozwiązania BAL Industry dla przemysłu</h2>
         <p>

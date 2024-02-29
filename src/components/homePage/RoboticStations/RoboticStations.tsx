@@ -8,10 +8,10 @@ import Image from 'next/image'
 import { useRef, useCallback } from 'react'
 import { FaArrowDown } from 'react-icons/fa6'
 import photo from '../../../../public/products/twin_one_axis.png'
-import styles from './PopularOffers.module.scss'
+import styles from './RoboticStations.module.scss'
 import useWindowDimensions from '@/hooks/useWindowDimensions'
 
-export default function PopularOffers() {
+export default function RoboticStations() {
   const windowDimensions = useWindowDimensions()
   const sliderRef = useRef(null)
 
@@ -102,7 +102,7 @@ export default function PopularOffers() {
 
   return (
     <div className={styles.popularOffers}>
-      <h2>Popularne oferty</h2>
+      <h2>Stanowiska zrobotyzowane</h2>
       <Swiper
         ref={sliderRef}
         pagination={false}
