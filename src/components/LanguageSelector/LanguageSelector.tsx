@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useLocale } from 'next-intl'
 import Image from 'next/image'
+import styles from './LanguageSelector.module.scss'
 import { Link, usePathname } from '@/navigation'
 
 const SupportedLocales = ['pl', 'en', 'de', 'fr'] as const
@@ -78,20 +79,21 @@ const GenerateLanguageSelectorTrigger: React.FC<LangWithFlagProps> = ({
   return (
     <div
       ref={languageRef}
-      className="language-selector"
+      className={styles.languageSelector}
       onClick={() => {
         setIsOpen(!isOpen)
       }}
     >
       <Image
         src={`https://hatscripts.github.io/circle-flags/flags/${locale === 'en' ? 'gb' : locale}.svg`}
+        className={styles.flag}
         alt={'flaga'}
         height={25}
         width={25}
       />
       {generateLanguageName(locale)}
       {isOpen && (
-        <div className="language-options">
+        <div>
           {SupportedLocales.map((supportedLocale) => (
             <LinkWithFlag
               key={supportedLocale}

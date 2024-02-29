@@ -3,16 +3,28 @@
 'use client'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import { LuSearch } from 'react-icons/lu'
+import { LuSearch, LuShoppingCart } from 'react-icons/lu'
+import { FaRegBookmark, FaRegUserCircle } from 'react-icons/fa'
 import logoWhite from '../../../public/logos/BALIndustryLogoWhite.svg'
 import styles from './Navbar.module.scss'
 import Hamburger from './hamburger/Hamburger'
 import HamburgerMenu from './hamburgerMenu/HamburgerMenu'
+import useWindowDimensions from '@/hooks/useWindowDimensions'
+import { LanguageSelector } from '../LanguageSelector/LanguageSelector'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [chosenMenu, setChosenMenu] = useState<string | null>(null)
+  const windowDimensions = useWindowDimensions()
+
+  useEffect(() => {
+    if (windowDimensions.width !== undefined && windowDimensions.width < 900) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }, [windowDimensions.width])
 
   const ref = useRef(null)
 
@@ -77,11 +89,19 @@ export default function Navbar() {
                 className={styles.searchbar}
               />
             </div>
-            <ul>
-              <li>Zapisane</li>
-              <li>Zaloguj</li>
-              <li>Koszyk</li>
-              <li>Polska</li>
+            <ul className={styles.topOptions}>
+              <li>
+                Zapisane <FaRegBookmark />
+              </li>
+              <li>
+                Zaloguj <FaRegUserCircle />
+              </li>
+              <li>
+                Koszyk <LuShoppingCart />
+              </li>
+              <li>
+                <LanguageSelector />
+              </li>
             </ul>
           </div>
           <div

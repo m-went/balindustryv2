@@ -1,0 +1,11 @@
+.languageSelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+
+  .flag {
+    width: 25px;
+  }
+}

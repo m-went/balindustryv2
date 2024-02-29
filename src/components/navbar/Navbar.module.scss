@@ -151,3 +151,23 @@
 .submenuOpen .submenusList {
   height: 35%;
 }
+
+.topOptions {
+  gap: 16px;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}

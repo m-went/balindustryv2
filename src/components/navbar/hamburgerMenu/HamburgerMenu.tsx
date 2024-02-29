@@ -11,6 +11,7 @@ import {
 import { LuShoppingCart, LuDownload, LuInfo } from 'react-icons/lu'
 import { useState } from 'react'
 import styles from './HamburgerMenu.module.scss'
+import { LanguageSelector } from '@/components/LanguageSelector/LanguageSelector'
 
 interface HamburgerMenuProps {
   isMenuOpen: boolean
@@ -102,7 +103,9 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             <LuInfo />
             POMOC
           </li>
-          <li>Polska</li>
+          <li className={styles.languageSelector}>
+            <LanguageSelector />
+          </li>
         </ul>
       </div>
     </div>
