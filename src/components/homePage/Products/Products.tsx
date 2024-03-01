@@ -67,16 +67,6 @@ export default function Products() {
                   />
                 </div>
               )}
-              {/* 
-              {card.topPhoto ? (
-                <Image src={card.topPhoto} alt="Section photo" />
-              ) : (
-                <Button
-                  disabled={false}
-                  content="Dowiedz się więcej"
-                  size="XL"
-                />
-              )} */}
             </div>
             <div className={styles.cardBottom}>
               <h3>{card.bottomHeader}</h3>

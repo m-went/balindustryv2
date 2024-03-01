@@ -1,0 +1,68 @@
+@import '@/app/styles/fontSizes';
+@import '@/app/styles/colors';
+
+.footer {
+  background-color: $footer-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $text-white-color;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.logoContainer {
+  margin-left: 140px;
+  width: 100%;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 200px;
+  gap: 60px;
+
+  h4 {
+    font-size: $extra-large;
+  }
+
+  li {
+    min-width: 70px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+}
+
+.bottomBar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  margin-top: 60px;
+
+  span {
+    align-self: center;
+  }
+
+  ul {
+    margin: 0;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

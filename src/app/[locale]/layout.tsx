@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { register } from 'swiper/element/bundle'
 import '../globals.scss'
 import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 register()
@@ -37,6 +38,7 @@ export default async function RootLayout({ children }: Props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
