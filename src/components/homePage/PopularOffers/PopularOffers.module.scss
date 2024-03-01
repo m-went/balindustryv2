@@ -56,20 +56,15 @@
 }
 
 .swiper {
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .popularOffers {
   h2 {
     color: $section-name-color;
-    margin-left: 50px;
     font-size: $section-name-size;
     font-weight: 400;
   }
-}
-
-.swiperSlide:first-child {
-  margin-left: 40px;
 }
 
 .swipeButton {

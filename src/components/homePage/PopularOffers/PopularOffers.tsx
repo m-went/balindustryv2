@@ -26,7 +26,7 @@ export default function PopularOffers() {
     },
     {
       img: photo,
-      productName: 'Stanowisko Twin One-axis22',
+      productName: 'Stanowisko Twin One-axis',
       productSecondLine: 'Robot Gofa 15000, UR5/UR12',
       lowestPrice: 'Najniższa cena z ostatnich 30 dni: 7,50 zł',
       actualPrice: '300$',
@@ -101,7 +101,7 @@ export default function PopularOffers() {
   }, [])
 
   return (
-    <div className={styles.popularOffers}>
+    <section className={styles.popularOffers}>
       <h2>Popularne oferty</h2>
       <Swiper
         ref={sliderRef}
@@ -109,7 +109,7 @@ export default function PopularOffers() {
         modules={[Pagination, Navigation, Autoplay]}
         loop={true}
         className={styles.swiper}
-        slidesPerView={Math.floor(windowDimensions.width / 320)}
+        slidesPerView={Math.floor((windowDimensions.width - 100) / 320)}
         spaceBetween={40}
         navigation={true}
         autoplay={{
@@ -147,6 +147,6 @@ export default function PopularOffers() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

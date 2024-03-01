@@ -1,0 +1,32 @@
+@import '@/app/styles/fontSizes';
+@import '@/app/styles/colors';
+
+.solutions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0 50px;
+
+  h2 {
+    color: $section-name-color;
+    font-size: $section-name-size;
+    font-weight: 400;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  p {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 230px;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-left: auto;
+  }
+}

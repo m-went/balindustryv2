@@ -41,6 +41,15 @@
   flex-direction: column;
   padding-bottom: 50px;
   cursor: pointer;
+
+  button {
+    background-color: $welcome-slider-button;
+  }
+
+  button:hover {
+    background-color: $welcome-slider-button-hover;
+    color: $text-dark-color;
+  }
 }
 
 .paginationBullet {
