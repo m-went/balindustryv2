@@ -1,0 +1,90 @@
+@import '@/app/styles/colors';
+@import '@/app/styles/fontSizes';
+
+.products {
+  h2 {
+    color: $section-name-color;
+    font-size: $section-name-size;
+    font-weight: 400;
+  }
+}
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 70px;
+  column-gap: 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $button-bg;
+  cursor: pointer;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  background-color: $button-bg;
+  color: $text-white-color;
+  gap: 25px;
+  padding: 25px;
+  min-height: 230px;
+
+  h3 {
+    font-weight: 500;
+    font-size: $products-section-h3;
+  }
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+
+  h3 {
+    font-weight: 500;
+    font-size: $products-section-h3;
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.servicesCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  button {
+    background-color: $white;
+    color: $text-dark-color;
+    padding: 16px;
+    font-weight: 600;
+    align-self: flex-end;
+    min-width: 200px;
+  }
+}
+
+.headerWOImg {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .productsContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 140px;
+  }
+}

@@ -9,6 +9,7 @@ import Solutions from '@/components/homePage/Solutions/Solutions'
 import Portfolio from '@/components/homePage/Portfolio/Portfolio'
 import CatalogTools from '@/components/homePage/CatalogTools/CatalogTools'
 import Partners from '@/components/homePage/Partners/Partners'
+import Products from '@/components/homePage/Products/Products'
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
         <Portfolio />
         <CatalogTools />
         <Partners />
-        <div>Nasze produkty</div>
+        <Products />
       </div>
     </main>
   )
