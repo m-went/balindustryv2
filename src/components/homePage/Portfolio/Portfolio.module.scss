@@ -1,0 +1,26 @@
+@import '@/app/styles/fontSizes';
+@import '@/app/styles/colors';
+
+.portfolio {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+
+  h2 {
+    color: $section-name-color;
+    font-size: $section-name-size;
+    font-weight: 400;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    max-width: 230px;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-left: auto;
+  }
+}

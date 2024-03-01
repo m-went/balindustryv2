@@ -1,7 +1,3 @@
-/* eslint-disable import/no-unassigned-import */
-'use client'
-import 'swiper/css'
-import 'swiper/css/pagination'
 import styles from './Solutions.module.scss'
 import Button from '@/components/button/Button'
 

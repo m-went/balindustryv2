@@ -6,6 +6,8 @@ import WelcomeSlider from '@/components/homePage/WelcomeSlider/WelcomeSlider'
 import PopularOffers from '@/components/homePage/PopularOffers/PopularOffers'
 import RoboticStations from '@/components/homePage/RoboticStations/RoboticStations'
 import Solutions from '@/components/homePage/Solutions/Solutions'
+import Portfolio from '@/components/homePage/Portfolio/Portfolio'
+import CatalogTools from '@/components/homePage/CatalogTools/CatalogTools'
 
 export default function Home() {
   return (
@@ -15,14 +17,8 @@ export default function Home() {
         <PopularOffers />
         <RoboticStations />
         <Solutions />
-        <div>
-          <h2>
-            Portfolio produktów BAL Industry w zakresie robotyki i
-            automatyzacji.
-          </h2>
-          <button>Pobierz katalog</button>
-        </div>
-        <div>Katalog/galeria</div>
+        <Portfolio />
+        <CatalogTools />
         <div>Partnerzy</div>
         <div>Nasze produkty</div>
       </div>
