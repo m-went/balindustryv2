@@ -8,6 +8,7 @@ import RoboticStations from '@/components/homePage/RoboticStations/RoboticStatio
 import Solutions from '@/components/homePage/Solutions/Solutions'
 import Portfolio from '@/components/homePage/Portfolio/Portfolio'
 import CatalogTools from '@/components/homePage/CatalogTools/CatalogTools'
+import Partners from '@/components/homePage/Partners/Partners'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <Solutions />
         <Portfolio />
         <CatalogTools />
-        <div>Partnerzy</div>
+        <Partners />
         <div>Nasze produkty</div>
       </div>
     </main>
