@@ -44,17 +44,16 @@ export default function Footer() {
         ))}
       </div>
       <div className={styles.bottomBar}>
-        <span>&copy; 2023</span>
         <ul>
-          <li>BAL Industry</li>
+          <li>&copy; 2023 BAL Industry</li>
           <li>Wsola, Gombrowicza 4</li>
           <li>26-660 Jedlińsk</li>
-          <li className={styles.socials}>
-            <FaInstagram />
-            <FaLinkedinIn />
-            <FaTwitter />
-          </li>
         </ul>
+        <div className={styles.socials}>
+          <FaInstagram />
+          <FaLinkedinIn />
+          <FaTwitter />
+        </div>
       </div>
     </footer>
   )
