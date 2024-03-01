@@ -1,5 +1,6 @@
 @import '@/app/styles/fontSizes';
 @import '@/app/styles/colors';
+@import '@/app/styles/mixins';
 
 .footer {
   background-color: $footer-bg;
@@ -13,8 +14,16 @@
 }
 
 .logoContainer {
-  margin-left: 140px;
+  margin-left: 12px;
   width: 100%;
+
+  @include phone {
+    margin-left: 60px;
+  }
+
+  @include tablet {
+    margin-left: 140px;
+  }
 }
 
 .menuContainer {
