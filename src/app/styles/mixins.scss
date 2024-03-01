@@ -1,6 +1,12 @@
 @import './breakpoints';
 
 // breakpoints
+@mixin small-phone {
+  @media only screen and (min-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media only screen and (min-width: $breakpoint-s) {
     @content;
