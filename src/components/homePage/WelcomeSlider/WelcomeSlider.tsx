@@ -66,7 +66,7 @@ export default function WelcomeSlider() {
         pagination={slidesPagination}
         modules={[Pagination]}
         loop={true}
-        className="mySwiper"
+        className={styles.welcomeSwiper}
       >
         {slidesContent.map((slide, index) => (
           <SwiperSlide key={index}>

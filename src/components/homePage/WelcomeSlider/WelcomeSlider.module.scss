@@ -1,6 +1,7 @@
 @import '@/app/styles/colors';
 @import '@/app/styles/fontSizes';
 @import '@/app/styles/diff';
+@import '@/app/styles/mixins';
 
 .welcomeSlider {
   position: relative;
@@ -34,12 +35,16 @@
   }
 }
 
+.welcomeSwiper {
+  height: calc(100% - 60px);
+}
+
 .slideContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 50px;
+  height: 100%;
   cursor: pointer;
 
   button {
@@ -49,6 +54,11 @@
   button:hover {
     background-color: $welcome-slider-button-hover;
     color: $text-dark-color;
+  }
+
+  @include laptop {
+    margin: auto;
+    max-width: 1000px;
   }
 }
 

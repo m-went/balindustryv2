@@ -1,5 +1,6 @@
 @import '@/app/styles/fontSizes';
 @import '@/app/styles/colors';
+@import '@/app/styles/mixins';
 
 .slideContainer {
   border-radius: 24px;
@@ -62,8 +63,16 @@
 .popularOffers {
   h2 {
     color: $section-name-color;
-    font-size: $section-name-size;
+    font-size: $section-name-small-size;
     font-weight: 400;
+  }
+
+  @include laptop {
+    align-items: flex-start;
+
+    h2 {
+      font-size: $section-name-size;
+    }
   }
 }
 
