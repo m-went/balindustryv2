@@ -6,11 +6,11 @@ import { useState, useEffect, useRef } from 'react'
 import { LuSearch, LuShoppingCart } from 'react-icons/lu'
 import { FaRegBookmark, FaRegUserCircle } from 'react-icons/fa'
 import logoWhite from '../../../public/logos/BALIndustryLogoWhite.svg'
+import { LanguageSelector } from '../LanguageSelector/LanguageSelector'
 import styles from './Navbar.module.scss'
 import Hamburger from './hamburger/Hamburger'
 import HamburgerMenu from './hamburgerMenu/HamburgerMenu'
 import useWindowDimensions from '@/hooks/useWindowDimensions'
-import { LanguageSelector } from '../LanguageSelector/LanguageSelector'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -102,7 +102,7 @@ export default function Navbar() {
                 Koszyk <LuShoppingCart />
               </li>
               <li>
-                <LanguageSelector />
+                <LanguageSelector isMobile={isMobile} />
               </li>
             </ul>
           </div>

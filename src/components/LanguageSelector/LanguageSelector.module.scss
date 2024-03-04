@@ -1,11 +1,52 @@
+@import '@/app/styles/colors';
+
 .languageSelector {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   gap: 15px;
+  cursor: pointer;
+  position: relative;
 
   .flag {
     width: 25px;
   }
+
+  .flagsContainer {
+    position: absolute;
+    width: 460px;
+    top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #2b2b2b;
+    color: $text-white-color;
+    padding: 15px;
+    z-index: 3;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid $orange;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}
+
+.emptyFlag {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 1px solid $language-selector-empty-border;
+  background-color: $language-selector-empty-bg;
 }
