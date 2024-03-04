@@ -36,7 +36,11 @@ export default function CatalogTools() {
           <Link href="./">Dowiedz się więcej</Link>
         </div>
         <div className={styles.imgContainer}>
-          <Image src={suszarnia} alt="Tool photo" />
+          <Image
+            src={suszarnia}
+            alt="Tool photo"
+            className={styles.toolPhoto}
+          />
         </div>
       </div>
     </section>
