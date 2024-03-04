@@ -1,7 +1,8 @@
 @import '@/app/styles/colors';
+@import '@/app/styles/mixins';
 
 .partners {
-  h2 {
+  .header {
     text-align: center;
     letter-spacing: 11px;
     color: $text-dark-color;
@@ -11,11 +12,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 4rem;
-    margin-top: 60px;
   }
 
   img {
     height: 45px;
+  }
+
+  @include laptop {
   }
 }
