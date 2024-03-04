@@ -12,7 +12,7 @@
   padding-top: $navbar-height-mobile;
 
   h1 {
-    font-size: $welcome-slider-header-s;
+    font-size: $section-name-small-size;
     font-weight: 400;
     text-align: center;
   }
@@ -32,6 +32,12 @@
 
   button {
     margin: 36px 0;
+  }
+
+  @include laptop {
+    h1 {
+      font-size: $welcome-slider-header-s;
+    }
   }
 }
 

@@ -82,12 +82,14 @@ export default function Navbar() {
           <div className={styles.desktopNavbarTop}>
             <Image src={logoWhite} alt="Logo" />
             <div className={styles.searchbarWrapper}>
-              <LuSearch />
-              <input
-                type="text"
-                placeholder="Szukaj..."
-                className={styles.searchbar}
-              />
+              <div className={styles.inputContainer}>
+                <LuSearch />
+                <input
+                  type="text"
+                  placeholder="Szukaj..."
+                  className={styles.searchbar}
+                />
+              </div>
             </div>
             <ul className={styles.topOptions}>
               <li>
