@@ -66,6 +66,7 @@
   margin: 0 40px;
   display: flex;
   justify-content: center;
+  visibility: hidden;
 
   svg {
     color: $searchbar-color;
@@ -171,6 +172,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    padding: 3px 7px;
   }
 
   li:hover {

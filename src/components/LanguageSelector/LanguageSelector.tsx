@@ -227,7 +227,7 @@ const GenerateLanguageSelectorTrigger: React.FC<LangWithFlagProps> = ({
       ) : (
         <div
           ref={languageRef}
-          className={styles.languageSelector}
+          className={`${styles.languageSelector} ${isOpen ? styles.openSelector : ''}`}
           onClick={() => {
             setIsOpen(!isOpen)
           }}
